@@ -41,11 +41,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-
-        hankaku {
-            bindings = <&kp LA(TILDE)>;
-            key-positions = <38>;
-        };
     };
 
     macros {
