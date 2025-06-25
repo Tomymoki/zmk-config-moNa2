@@ -70,8 +70,6 @@ mkp_exit_AML: mkp_exit_AML {
         &sl 4>;
     label = "MKP_EXIT_AML";
 };
-
-
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
