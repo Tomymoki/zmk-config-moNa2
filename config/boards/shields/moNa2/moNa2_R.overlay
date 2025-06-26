@@ -30,6 +30,7 @@
         31 // k8
         32 // k9
     >;
+require-prior-idle-ms = <200>;
 };
 
 
