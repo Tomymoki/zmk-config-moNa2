@@ -1,5 +1,9 @@
 #include "moNa2.dtsi"
 
+&trackball_listener {
+    input-processors = <&zip_temp_layer 6 10000>;
+};
+
 &default_transform {
     col-offset = <6>;
 };
@@ -14,11 +18,21 @@
             ;
 };
 
+&zip_temp_layer {
+    excluded-positions = <
+        18 // J
+        19 // K
+        21 // ;
+        34 // Ctrl
+    >;
+};
+
+
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
+        input-processors = <&zip_temp_layer 5 10000>;
     };
 };
 
@@ -55,7 +69,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        automouse-layer = <6>;
+
         scroll-layers = <5>;
 
     };
