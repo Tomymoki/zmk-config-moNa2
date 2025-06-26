@@ -36,6 +36,16 @@ require-prior-idle-ms = <200>;
         device = <&trackball>;
         input-processors = <&zip_temp_layer 6 10000>;
     };
+
+
+    zip_temp_layer: zip_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        layer = <6>;
+        timeout-ms = <10000>;
+    };
+
+
 };
 
 &pinctrl {
