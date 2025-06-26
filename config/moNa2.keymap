@@ -39,54 +39,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        k1 {
-            bindings = <&none>;
-            key-positions = <6>;
-        };
-
-        k2 {
-            bindings = <&none>;
-            key-positions = <7>;
-        };
-
-        k3 {
-            bindings = <&none>;
-            key-positions = <8>;
-        };
-
-        k4 {
-            bindings = <&none>;
-            key-positions = <18>;
-        };
-
-        k5 {
-            bindings = <&none>;
-            key-positions = <19>;
-        };
-
-        k6 {
-            bindings = <&none>;
-            key-positions = <20>;
-        };
-
-        k7 {
-            bindings = <&none>;
-            key-positions = <30>;
-        };
-
-        k8 {
-            bindings = <&none>;
-            key-positions = <31>;
-        };
-
-        k9 {
-            bindings = <&none>;
-            key-positions = <32>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         to_layer_0: to_layer_0 {
