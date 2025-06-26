@@ -14,22 +14,6 @@
             ;
 };
 
-&zip_temp_layer {
-    excluded-positions = <
-        6 // k1
-        7 // k2
-        8 // k3
-        18 // k4
-        19 // k5
-        20 // k6
-        30 // k7
-        31 // k8
-        32 // k9
-    >;
-require-prior-idle-ms = <200>;
-};
-
-
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
@@ -43,9 +27,19 @@ require-prior-idle-ms = <200>;
         #input-processor-cells = <2>;
         layer = <6>;
         timeout-ms = <10000>;
+        require-prior-idle-ms = <200>;
+        excluded-positions = <
+        6 // k1
+        7 // k2
+        8 // k3
+        18 // k4
+        19 // k5
+        20 // k6
+        30 // k7
+        31 // k8
+        32 // k9
+    >;
     };
-
-
 };
 
 &pinctrl {
