@@ -73,19 +73,6 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R             &kp T                                             &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F             &kp G        &trans                &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp C         &kp C         &kp V             &kp B        &lt 4 COLON           &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_HENKAN  &lt 2 SPACE  &lt 3 INT_MUHENKAN    &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
-            >;
-
-            sensor-bindings =
-                <&scroll_up_down>,
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
-        };
-
-        default_layer {
-            bindings = <
 &kp Q         &kp L   &kp U   &kp F10      &kp F2                                         &kp F        &kp W  &lt 5 R  &kp Y  &lt 5 P
 &kp E         &kp I   &kp A   &kp O        &kp TAB        &trans          &kp LCTRL       &kp K        &kp T  &kp N    &kp S  &kp H
 &kp Z         &kp X   &kp C   &kp V        &kp JP_HANZEN  &kp LEFT_ALT    &kp LEFT_SHIFT  &kp G        &kp D  &kp M    &kp J  &kp B
