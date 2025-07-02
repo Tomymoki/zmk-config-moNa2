@@ -14,6 +14,20 @@
             ;
 };
 
+&zip_temp_layer {
+    excluded-positions = <
+        6 // k1
+        7 // k2
+        8 // k3
+        18 // k4
+        19 // k5
+        20 // k6
+        30 // k7
+        31 // k8
+        32 // k9
+    >;
+};
+
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
