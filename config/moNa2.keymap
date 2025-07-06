@@ -72,10 +72,10 @@
 
         default_layer {
             bindings = <
-&kp Q         &kp L   &kp U   &kp F10      &kp F2                                         &kp F        &kp W  &lt 5 R  &kp Y  &lt 5 P
-&kp E         &kp I   &kp A   &kp O        &kp TAB        &trans          &kp LCTRL       &kp K        &kp T  &kp N    &kp S  &lt 6 H
-&kp Z         &kp X   &kp C   &kp V        &kp JP_HANZEN  &kp LEFT_ALT    &kp LEFT_SHIFT  &kp G        &kp D  &kp M    &kp J  &kp B
-&kp LEFT_WIN  &kp F4  &kp F5  &lt 4 COMMA  &lt 2 PERIOD   &lt 3 SPACE     &kp BACKSPACE   &lt 1 ENTER                         &kp DEL
+&kp Q             &kp L   &kp U   &kp F10      &kp F2                                         &kp F        &kp W  &kp R  &kp Y  &kp P
+&mt LCTRL E       &kp I   &kp A   &kp O        &kp TAB        &trans          &kp LCTRL       &kp K        &kp T  &kp N  &kp S  &lt 6 H
+&mt LEFT_SHIFT Z  &kp X   &kp C   &kp V        &kp JP_HANZEN  &kp LEFT_ALT    &kp LEFT_SHIFT  &kp G        &kp D  &kp M  &kp J  &kp B
+&kp LEFT_WIN      &kp F4  &kp F5  &lt 4 COMMA  &lt 2 PERIOD   &lt 3 SPACE     &kp BACKSPACE   &lt 1 ENTER                       &kp DEL
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -105,10 +105,10 @@
 
         SYMBOLS {
             bindings = <
-&kp JP_YEN       &kp JP_TILDE  &kp JP_LPAREN  &kp JP_RPAREN  &kp SLASH                             &kp LESS_THAN  &kp GREATER_THAN  &kp JP_LBRACKET  &kp JP_RBRACKET  &trans
-&kp EXCLAMATION  &kp JP_AT     &kp HASH       &kp DOLLAR     &kp PERCENT  &trans    &kp DEL        &kp CARET      &kp AMPERSAND     &kp JP_PIPE      &kp PIPE         &kp COLON
-&trans           &trans        &trans        &kp JP_QUOTE   &kp JP_DQUOTE  &trans       &trans        &kp JP_LBRACE  &kp JP_RBRACE  &trans            &trans           &kp SEMICOLON
-&trans           &trans        &trans         &trans         &trans       &trans    &trans
+&kp JP_YEN       &kp JP_TILDE  &kp JP_LPAREN  &kp JP_RPAREN  &kp SLASH                         &kp LESS_THAN  &kp GREATER_THAN  &kp JP_LBRACKET  &kp JP_RBRACKET  &trans
+&kp EXCLAMATION  &kp JP_AT     &kp HASH       &kp DOLLAR     &kp PERCENT    &trans    &kp DEL  &kp CARET      &kp AMPERSAND     &kp JP_PIPE      &kp PIPE         &kp COLON
+&trans           &trans        &trans         &kp JP_QUOTE   &kp JP_DQUOTE  &trans    &trans   &kp JP_LBRACE  &kp JP_RBRACE     &trans           &trans           &kp SEMICOLON
+&trans           &trans        &trans         &trans         &trans         &trans    &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
