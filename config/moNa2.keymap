@@ -7,6 +7,17 @@
 
 // OS設定を日本語キーボードのまま使用するための変換定義
 
+#define JP_MINUS        MINUS             // -
+#define JP_SLASH        SLASH             // /
+#define JP_LT           LS(COMMA)         // <
+#define JP_GT           LS(DOT)           // >
+#define JP_EXCL         LS(N1)            // !
+#define JP_HASH         LS(N3)            // #
+#define JP_DOLLAR       LS(N4)            // $
+#define JP_PERCENT      LS(N5)            // %
+#define JP_AMP          LS(N6)            // &
+#define JP_SEMICOLON    SEMICOLON         // ;
+
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
