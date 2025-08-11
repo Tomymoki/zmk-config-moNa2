@@ -41,6 +41,7 @@
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
+#define JP_QUESTION     LS(SLASH)         // ?
 
 &mt {
     flavor = "balanced";
@@ -83,10 +84,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp L   &kp U   &kp TAB      &kp JP_HANZEN                                         &kp F        &kp W  &kp R  &kp Y  &kp P
-&mt LCTRL E       &kp I   &kp A   &kp O        &kp LEFT_ALT        &trans          &kp LCTRL       &kp K        &kp T  &kp N  &kp S  &lt 6 H
-&mt LEFT_SHIFT Z  &kp X   &kp C   &kp V        &kp F10  &kp F7    &kp LEFT_SHIFT  &kp G        &kp D  &kp M  &kp J  &kp B
-&kp LEFT_WIN      &kp F4  &kp F5  &lt 4 COMMA  &lt 2 PERIOD   &lt 3 SPACE     &kp BACKSPACE   &lt 1 ENTER                       &kp DEL
+&kp Q             &kp L   &kp U   &kp TAB      &kp JP_HANZEN                                 &kp F        &kp W  &kp R  &kp Y  &kp P
+&mt LCTRL E       &kp I   &kp A   &kp O        &kp LEFT_ALT   &trans         &kp LCTRL       &kp K        &kp T  &kp N  &kp S  &lt 6 H
+&mt LEFT_SHIFT Z  &kp X   &kp C   &kp V        &kp F10        &kp F7         &kp LEFT_SHIFT  &kp G        &kp D  &kp M  &kp J  &kp B
+&kp LEFT_WIN      &kp F4  &kp F5  &lt 4 COMMA  &lt 3 PERIOD   &lt 4 SPACE    &kp BACKSPACE   &lt 1 ENTER                       &kp DEL
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -94,10 +95,10 @@
 
         NUM {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_MINUS          &kp JP_EQUAL                       &kp F1  &kp F2  &kp F3  &kp F10  &trans
-&kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp JP_UNDERSCORE  &kp JP_ASTERISK  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
-&kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_PLUS           &kp JP_SLASH        &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans
-&kp NUMBER_0  &trans        &trans        &trans             &trans           &trans    &trans  &trans                           &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_MINUS       &kp JP_EQUAL                                 &kp F1  &kp F2  &kp F3  &kp F10  &kp LEFT_WIN
+&kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp JP_UNDERSCORE  &kp JP_ASTERISK  &trans    &kp LEFT_CONTROL  &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_PLUS        &kp JP_SLASH     &trans    &kp LEFT_SHIFT    &kp F7  &kp F8  &kp F9  &kp F12  &trans
+&kp N0        &trans        &trans        &trans             &trans           &trans    &trans            &trans                           &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -105,10 +106,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                     &kp ESCAPE      &kp BACKSPACE           &kp UP_ARROW  &kp DELETE               &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans    &trans  &kp HOME        &kp LEFT                &kp DOWN      &kp RIGHT                &kp END
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans    &trans  &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans        &kp LG(LS(RIGHT_ARROW))  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans    &trans  &trans
+&kp ESCAPE  &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &kp PAGE_UP                                &kp ESCAPE  &kp BACKSPACE           &kp UP_ARROW  &kp DELETE               &kp PAGE_UP
+&kp HOME    &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END        &trans    &kp LEFT_CONTROL  &kp HOME    &kp LEFT                &kp DOWN      &kp RIGHT                &kp END
+&trans      &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &kp PAGE_DOWN  &trans    &kp LEFT_SHIFT    &trans      &kp LG(LS(LEFT_ARROW))  &trans        &kp LG(LS(RIGHT_ARROW))  &kp PAGE_DOWN
+&trans      &trans                  &trans          &trans                   &trans         &trans    &trans            &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -116,10 +117,10 @@
 
         SYMBOLS {
             bindings = <
-&kp JP_YEN       &kp JP_TILDE  &kp JP_LPAREN  &kp JP_RPAREN  &kp JP_SLASH                         &kp JP_LT  &kp JP_GT  &kp JP_LBRACKET  &kp JP_RBRACKET  &trans
-&kp JP_EXCL  &kp JP_AT     &kp JP_HASH       &kp JP_DOLLAR     &kp JP_PERCENT    &trans    &kp DEL  &kp JP_CARET      &kp JP_AMP     &kp JP_ASTERISK      &kp JP_PIPE         &kp JP_COLON
-&trans           &trans        &trans         &kp JP_QUOTE   &kp JP_DQUOTE  &trans    &trans   &kp JP_LBRACE  &kp JP_RBRACE     &kp JP_RBRACE           &trans           &kp JP_SEMICOLON
-&trans           &trans        &trans         &trans         &trans         &trans    &trans
+&kp JP_PERCENT    &kp JP_DOLLAR  &kp JP_AMP       &kp JP_CARET  &kp JP_SLASH                       &kp JP_YEN         &kp JP_LBRACE    &kp JP_RBRACE    &kp JP_LT         &kp JP_GT
+&kp JP_AT         &kp JP_HASH    &kp JP_ASTERISK  &kp JP_PLUS   &kp JP_EQUAL     &trans    &trans  &kp JP_UNDERSCORE  &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_SEMICOLON  &kp JP_COLON
+&kp JP_BACKQUOTE  &kp JP_TILDE   &kp JP_MINUS     &kp JP_EXCL   &kp JP_QUESTION  &trans    &trans  &kp JP_PIPE        &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_QUOTE      &kp JP_DQUOTE
+&trans            &trans         &trans           &trans        &trans           &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
