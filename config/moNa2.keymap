@@ -120,18 +120,18 @@
 &trans      &trans                  &trans          &trans                   &trans         &trans    &trans            &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&left_right>;
         };
 
         SYMBOLS {
             bindings = <
-&kp JP_PERCENT    &kp JP_DOLLAR  &kp JP_AMP       &kp JP_CARET  &kp JP_SLASH                       &kp JP_YEN         &kp JP_LBRACE    &kp JP_RBRACE    &kp JP_LT         &kp JP_GT
-&kp JP_AT         &kp JP_HASH    &kp JP_ASTERISK  &kp JP_PLUS   &kp JP_EQUAL     &trans    &trans  &kp JP_UNDERSCORE  &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_SEMICOLON  &kp JP_COLON
-&kp JP_BACKQUOTE  &kp JP_TILDE   &kp JP_MINUS     &kp JP_EXCL   &kp JP_QUESTION  &trans    &trans  &kp JP_PIPE        &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_QUOTE      &kp JP_DQUOTE
+&kp JP_PERCENT    &kp JP_DOLLAR  &kp JP_AMP       &kp JP_CARET  &kp JP_SLASH                                &kp JP_YEN         &kp JP_LBRACE    &kp JP_RBRACE    &kp JP_LT         &kp JP_GT
+&kp JP_AT         &kp JP_HASH    &kp JP_ASTERISK  &kp JP_PLUS   &kp JP_EQUAL     &trans    &kp RCTRL        &kp JP_UNDERSCORE  &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_SEMICOLON  &kp JP_COLON
+&kp JP_BACKQUOTE  &kp JP_TILDE   &kp JP_MINUS     &kp JP_EXCL   &kp JP_QUESTION  &trans    &kp RIGHT_SHIFT  &kp JP_PIPE        &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_QUOTE      &kp JP_DQUOTE
 &trans            &trans         &trans           &trans        &trans           &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&left_right>;
         };
 
         BLUETOOTH {
