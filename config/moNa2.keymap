@@ -17,7 +17,6 @@
 #define JP_PERCENT      LS(N5)            // %
 #define JP_AMP          LS(N6)            // &
 #define JP_SEMICOLON    SEMICOLON         // ;
-
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
@@ -87,7 +86,7 @@
 &kp Q             &kp L   &kp U   &kp TAB      &kp JP_HANZEN                                 &kp F        &kp W  &kp R  &kp Y  &kp P
 &mt LCTRL E       &kp I   &kp A   &kp O        &kp LEFT_ALT   &trans         &kp LCTRL       &kp K        &kp T  &kp N  &kp S  &lt 6 H
 &mt LEFT_SHIFT Z  &kp X   &kp C   &kp V        &kp F10        &kp F7         &kp LEFT_SHIFT  &kp G        &kp D  &kp M  &kp J  &kp B
-&kp LEFT_WIN      &kp F4  &kp F5  &lt 4 COMMA  &lt 3 PERIOD   &lt 4 SPACE    &kp BACKSPACE   &lt 1 ENTER                       &kp DEL
+&kp LEFT_WIN      &kp F4  &kp F5  &lt 4 COMMA  &lt 2 PERIOD   &lt 3 SPACE    &kp BACKSPACE   &lt 1 ENTER                       &kp DEL
             >;
 
             sensor-bindings = <&scroll_up_down>;
