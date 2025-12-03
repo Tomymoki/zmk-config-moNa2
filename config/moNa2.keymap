@@ -74,7 +74,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <20>;
+            tap-ms = <50>;
             label = "behavior_sensor_rotate_up_down";
         };
 
@@ -83,7 +83,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
 
-            tap-ms = <20>;
+            tap-ms = <50>;
             label = "LEFT_RIGHT";
         };
     };
