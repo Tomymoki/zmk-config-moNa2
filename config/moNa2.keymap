@@ -87,6 +87,24 @@
             tap-ms = <50>;
             label = "LEFT_RIGHT";
         };
+
+        mt_z: mt_z {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            label = "MT_Z";
+        };
+
+        td_z: td_z {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&mt_z LEFT_SHIFT Z>, <&kp LS(Z)>;
+            label = "TD_Z";
+        };
     };
 
     keymap {
@@ -96,7 +114,7 @@
             bindings = <
 &kp Q             &kp L   &kp U     &kp TAB    &kp F4                                           &kp F        &kp W  &kp R  &kp Y  &kp P
 &mt LCTRL E       &kp I   &kp A     &kp O      &kp LEFT_ALT  &trans             &kp LCTRL       &kp K        &kp T  &kp N  &kp S  &lt 6 H
-&mt LEFT_SHIFT Z  &kp X   &kp C     &kp V      &kp PERIOD    &kp COMMA          &kp LEFT_SHIFT  &kp G        &kp D  &kp M  &kp J  &kp B
+&td_z             &kp X   &kp C     &kp V      &kp PERIOD    &kp COMMA          &kp LEFT_SHIFT  &kp G        &kp D  &kp M  &kp J  &kp B
 &kp LEFT_WIN      &kp F5  &lt 4 F7  &lt 5 F10  &lt 2 SPACE   &lt 3 JP_HANZEN    &kp BACKSPACE   &lt 1 ENTER                       &kp DEL
             >;
 
