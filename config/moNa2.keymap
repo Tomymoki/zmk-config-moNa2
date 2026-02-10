@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 30
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 45
 
 // OS設定を日本語キーボードのまま使用するための変換定義
 
@@ -108,6 +108,22 @@
             label = "LT_FAST";
         };
 
+        undo_redo: undo_redo {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LC(Z)>, <&kp LC(Y)>;
+            tap-ms = <50>;
+            label = "UNDO_REDO";
+        };
+
+        tab_switch: tab_switch {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LC(LS(TAB))>, <&kp LC(TAB)>;
+            tap-ms = <50>;
+            label = "TAB_SWITCH";
+        };
+
         td_z: td_z {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -128,7 +144,7 @@
 &kp LEFT_WIN      &kp F5  &lt_fast 4 F7  &lt_fast 5 F10  &lt_fast 2 SPACE   &lt_fast 3 JP_HANZEN    &kp BACKSPACE   &lt_fast 1 ENTER                       &kp DEL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&undo_redo>;
         };
 
         NUM {
@@ -139,7 +155,7 @@
 &kp N0        &trans        &kp JP_SLASH  &trans             &trans           &trans       &trans            &trans                           &trans
             >;
 
-            sensor-bindings = <&left_right>;
+            sensor-bindings = <&undo_redo>;
         };
 
         ARROW {
@@ -150,7 +166,7 @@
 &kp LEFT_WIN    &kp F5                  &kp F4              &trans                   &trans         &trans    &trans            &trans
             >;
 
-            sensor-bindings = <&left_right>;
+            sensor-bindings = <&tab_switch>;
         };
 
         SYMBOLS {
@@ -161,7 +177,7 @@
 &trans            &trans         &trans           &trans        &trans           &trans
             >;
 
-            sensor-bindings = <&left_right>;
+            sensor-bindings = <&undo_redo>;
         };
 
         BLUETOOTH {
@@ -172,7 +188,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                  &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&undo_redo>;
         };
 
         SCROLL {
@@ -194,7 +210,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                      &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&undo_redo>;
         };
     };
 };
