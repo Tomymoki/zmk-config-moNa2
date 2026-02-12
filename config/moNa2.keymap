@@ -110,7 +110,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <130>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             bindings = <&mo>, <&kp>;
             label = "LT_FAST";
@@ -132,6 +132,14 @@
             label = "TAB_SWITCH";
         };
 
+        zoom_in_out: zoom_in_out {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LC(JP_PLUS)>, <&kp LC(JP_MINUS)>;
+            tap-ms = <50>;
+            label = "ZOOM_IN_OUT";
+        };
+
     };
 
     keymap {
@@ -145,7 +153,7 @@
 &kp LEFT_WIN      &kp F5  &lt 4 F7  &lt_fast 5 F10  &lt_fast 2 SPACE   &lt_fast 3 JP_HANZEN    &kp BACKSPACE   &lt_fast 1 ENTER                       &kp DEL
             >;
 
-            sensor-bindings = <&undo_redo>;
+            sensor-bindings = <&zoom_in_out>;
         };
 
         NUM {
