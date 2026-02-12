@@ -67,17 +67,6 @@
             label = "TO_LAYER_0";
         };
 
-        zoom_in_macro: zoom_in_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>, <&msc SCRL_UP>, <&macro_release &kp LCTRL>;
-        };
-
-        zoom_out_macro: zoom_out_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>, <&msc SCRL_DOWN>, <&macro_release &kp LCTRL>;
-        };
     };
 
     behaviors {
@@ -166,12 +155,20 @@
             label = "LT_H";
         };
 
-        zoom_in_out: zoom_in_out {
+        volume_control: volume_control {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&zoom_in_macro>, <&zoom_out_macro>;
-            tap-ms = <50>;
-            label = "ZOOM_IN_OUT";
+            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+            tap-ms = <20>;
+            label = "VOLUME_CONTROL";
+        };
+
+        brightness_control: brightness_control {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_BRI_UP>, <&kp C_BRI_DN>;
+            tap-ms = <20>;
+            label = "BRIGHTNESS_CONTROL";
         };
 
     };
@@ -187,7 +184,7 @@
 &kp LEFT_WIN      &kp F5  &lt 4 F7  &lt_scroll 5 F10  &lt_fast 2 SPACE   &lt_fast 3 JP_HANZEN    &kp BACKSPACE   &lt_fast 1 ENTER                       &kp DEL
             >;
 
-            sensor-bindings = <&zoom_in_out>;
+            sensor-bindings = <&volume_control>;
         };
 
         NUM {
@@ -220,7 +217,7 @@
 &trans            &trans         &trans           &trans        &trans           &trans
             >;
 
-            sensor-bindings = <&undo_redo>;
+            sensor-bindings = <&brightness_control>;
         };
 
         BLUETOOTH {
@@ -231,7 +228,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                  &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&undo_redo>;
+            sensor-bindings = <&volume_control>;
         };
 
         SCROLL {
@@ -253,7 +250,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                      &trans
             >;
 
-            sensor-bindings = <&undo_redo>;
+            sensor-bindings = <&volume_control>;
         };
     };
 };
