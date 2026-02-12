@@ -166,6 +166,17 @@
             label = "LT_H";
         };
 
+        lt_snipe: lt_snipe {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&mo>, <&kp>;
+            label = "LT_SNIPE";
+        };
+
         zoom_in_out: zoom_in_out {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -181,7 +192,7 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp L   &kp U     &kp TAB    &kp F4                                           &kp F        &kp W  &kp R  &kp Y  &kp P
+&kp Q             &kp L   &kp U     &kp TAB    &kp F4                                           &kp F        &lt_snipe 7 W  &kp R  &kp Y  &kp P
 &mt LCTRL E       &kp I   &kp A     &kp O      &kp LEFT_ALT  &trans             &kp LCTRL       &kp K        &kp T  &kp N  &kp S  &lt_h 6 H
 &mt_z LEFT_SHIFT Z  &kp X   &kp C     &kp V      &kp PERIOD    &kp COMMA          &kp LEFT_SHIFT  &kp G        &kp D  &kp M  &kp J  &kp B
 &kp LEFT_WIN      &kp F5  &lt 4 F7  &lt_scroll 5 F10  &lt_fast 2 SPACE   &lt_fast 3 JP_HANZEN    &kp BACKSPACE   &lt_fast 1 ENTER                       &kp DEL
@@ -254,6 +265,17 @@
             >;
 
             sensor-bindings = <&undo_redo>;
+        };
+
+        snipe_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
     };
 };
