@@ -212,7 +212,7 @@
 &trans            &trans                &trans              &trans                 &trans                    &trans    &trans             &trans
             >;
 
-            sensor-bindings = <&tab_switch>;
+            sensor-bindings = <&inc_dec_kp LBKT RBKT>;
         };
 
         SYMBOLS {
@@ -223,7 +223,7 @@
 &trans            &trans         &trans           &trans        &trans           &trans
             >;
 
-            sensor-bindings = <&brightness_control>;
+            sensor-bindings = <&inc_dec_kp LC(LG(MINUS)) LC(LG(NON_US_BACKSLASH))>;
         };
 
         BLUETOOTH {
