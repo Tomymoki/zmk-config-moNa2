@@ -212,7 +212,7 @@
 &trans            &trans                &trans              &trans                 &trans                    &trans    &trans             &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(LBKT) LC(RBKT)>;
+            sensor-bindings = <&inc_dec_kp LC(JP_RBRACKET) LC(JP_LBRACKET)>;
         };
 
         SYMBOLS {
@@ -223,7 +223,7 @@
 &trans            &trans         &trans           &trans        &trans           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(LG(MINUS)) LC(LG(LA(INTERNATIONAL_3)))>;
+            sensor-bindings = <&inc_dec_kp LC(LG(MINUS))  LC(LG(EQUAL))>;
         };
 
         BLUETOOTH {
