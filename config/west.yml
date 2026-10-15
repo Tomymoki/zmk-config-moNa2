@@ -13,9 +13,9 @@ manifest:
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: sayu-hub
-      revision: a3510c9de46de8b42c803286f4978466c6ea3916
+      revision: main
     - name: zmk-rgbled-widget  # <-- new entry
       remote: caksoylar
-      revision: main
+      revision: a3510c9de46de8b42c803286f4978466c6ea3916
   self:
     path: config
