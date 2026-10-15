@@ -212,7 +212,7 @@
 &trans            &trans                &trans              &trans                 &trans                    &trans    &trans             &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LBKT RBKT>;
+            sensor-bindings = <&inc_dec_kp LC(LBKT) LC(RBKT)>;
         };
 
         SYMBOLS {
@@ -234,7 +234,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                  &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&volume_control>;
+            sensor-bindings = <&brightness_control>;
         };
 
         SCROLL {
