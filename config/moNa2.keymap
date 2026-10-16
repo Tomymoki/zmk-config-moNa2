@@ -212,7 +212,7 @@
 &trans            &trans                &trans              &trans                 &trans                    &trans    &trans             &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(JP_RBRACKET) LC(JP_LBRACKET)>;
+            sensor-bindings = <&inc_dec_kp LG(JP_SEMICOLON) LG(JP_LBRACKET)>;
         };
 
         SYMBOLS {
