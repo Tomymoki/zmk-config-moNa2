@@ -256,7 +256,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                      &trans
             >;
 
-            sensor-bindings = <&volume_control>;
+            sensor-bindings = <&scroll_up_down>;
         };
     };
 };
