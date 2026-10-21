@@ -6,13 +6,15 @@ manifest:
       url-base: https://github.com/sayu-hub
     - name: caksoylar  # <-- new entry
       url-base: https://github.com/caksoylar  
+    - name: Tomymoki
+      url-base: https://github.com/Tomymoki
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3.0
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: sayu-hub
+      remote: Tomymoki
       revision: main
     - name: zmk-rgbled-widget  # <-- new entry
       remote: caksoylar
